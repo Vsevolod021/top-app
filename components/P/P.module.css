@@ -1,0 +1,20 @@
+.p {
+    font-weight: 400;
+    color: var(--black);
+    margin: 0;
+}
+
+.small {
+    font-size: 0.875em;
+    line-height: 1.5em;
+}
+
+.middle {
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+.large {
+    font-size: 1.125em;
+    line-height: 1.8125em;
+}
