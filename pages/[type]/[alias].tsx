@@ -9,9 +9,14 @@ import { firstLevelMenu } from "../../helpers/helpers";
 import { TopPageComponent } from "../../page-components";
 import { API } from "../../helpers/api";
 import HEAD from "next/head";
+import { Error404 } from "../404";
 
 
 function TopPage({ firstCategory, page, products }: TopPageProps): JSX.Element {
+    if (!page || !products) {
+        return <Error404 />;
+    }
+
     return <>
         <HEAD>
             <title>{page.metaTitle}</title>
@@ -24,7 +29,8 @@ function TopPage({ firstCategory, page, products }: TopPageProps): JSX.Element {
             firstCategory={firstCategory}
             page={page}
             products={products}
-        /></>;
+        />
+    </>;
 }
 
 export default withLayout(TopPage);
@@ -41,7 +47,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
     return {
         paths,
-        fallback: true
+        fallback: false
     };
 };
 

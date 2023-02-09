@@ -5,11 +5,12 @@
   "scripts": {
     "prepare": "husky install",
     "dev": "next dev",
+    "export": "next export",
     "debug": "cross-env NODE_OPTIONS='--inspect' next dev",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "stylelint": "stylelint \"**/*.css\""
+    "stylelint": "stylelint \"**/*.css\" --fix"
   },
   "dependencies": {
     "axios": "^1.1.3",

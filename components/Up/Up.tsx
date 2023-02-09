@@ -26,7 +26,7 @@ export const Up = (): JSX.Element => {
             animate={controls}
             initial={{ opacity: 0 }}
         >
-            <ButtonIcon appearance='primary' icon='close' />
+            <ButtonIcon appearance='primary' icon='up' />
         </motion.div>
     );
 };
