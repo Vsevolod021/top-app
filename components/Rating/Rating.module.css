@@ -2,6 +2,10 @@
     fill: var(--primary);
 }
 
+.star {
+    display: inline-block;
+}
+
 .star svg{
     margin-right: 5px;
 }
@@ -13,4 +17,19 @@
 
 .editable svg {
     transition: .3s all;
+}
+
+.ratingWrapper {
+    position: relative;
+}
+
+.error svg {
+    stroke: var(--red);
+}
+
+.errorMessage {
+    position: absolute;
+    bottom: -15px;
+    left: 0;
+    color: var(--red);
 }

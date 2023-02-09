@@ -1,0 +1,284 @@
+.product {
+    display: grid;
+    grid-template-columns: 
+        [start] 70px [logoend] 30px [titlestart] calc(50% - 100px) 
+        [middle] 1fr [pricestart] auto [priceend] 40px [creditstart] auto 
+        [creditend] 40px [ratingstart] auto [end];
+    margin-top: 30px;
+    padding: 30px;
+}
+
+.logo {
+    grid-column: start / logoend;
+    grid-row: 1 / span 2;
+}
+
+.title, .tags {
+    grid-column: titlestart / middle;
+}
+
+.price, .priceTitle {
+    grid-column: pricestart / priceend;
+    white-space: nowrap;
+}
+
+.credit, .creditTitle {
+    grid-column: creditstart / creditend;
+}
+
+.rating, .ratingTitle {
+    grid-column: ratingstart / end;
+}
+
+.hr, .description, .actions {
+    grid-column: start / end;
+}
+
+.features {
+    grid-column: start / middle;
+}
+
+.advBlock {
+    grid-column: middle / end;
+}
+
+.logo img {
+    border-radius: 5px;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 27px;
+    align-self: flex-end;
+}
+
+.category {
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.price, .credit {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 27px;
+    align-self: flex-end;
+}
+
+.discount {
+    margin-left: 5px;
+}
+
+.month {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.rating {
+    align-self: flex-end;
+    white-space: nowrap;
+}
+
+.priceTitle,
+.creditTitle, 
+.ratingTitle {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 19px;
+}
+
+.description {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.advBlock {
+    font-size: 16px;
+    line-height: 22px;    
+}
+
+.advTitle {
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.advantages,
+.disadvantages {
+    padding-left: 15px;
+}
+
+.advantages {
+    border-left: 3px solid #1DC37E;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.disadvantages {
+    border-left: 3px solid var(--red);
+}
+
+.reviewButton {
+    margin-left: 20px;
+}
+
+.features {
+    margin-top: 15px;
+}
+
+.characteristics {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: baseline;
+    gap: 10px;
+    padding-right: 60px;    
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.characteristicsName {
+    font-weight: 700;
+}
+
+.characteristicsDots {
+    border-bottom: 1px dashed var(--gray);
+    margin-bottom: 10px;
+}
+
+.ratingTitle a {
+    color: var(--primary);
+}
+
+.reviews {
+    overflow: hidden;
+    padding: 30px;
+}
+
+.actions {
+    position: relative;
+    z-index: 100;
+}
+
+@media screen and (max-width: 1320px) {
+    .product {
+        display: grid;
+        grid-template-columns: 70px 30px auto 40px auto 40px 1fr;
+        grid-template-areas: 
+        "logo . title title title title title"
+        "logo . tags tags tags tags tags"
+        "price price price . credit . rating"
+        "priceTitle priceTitle priceTitle . creditTitle . ratingTitle"
+        "hr hr hr hr hr hr hr"
+        "description description description description description description description"
+        "features features features features features features features"
+        "advBlock advBlock advBlock advBlock advBlock advBlock advBlock"
+        "hr2 hr2 hr2 hr2 hr2 hr2 hr2"
+        "actions actions actions actions actions actions actions";
+    }
+
+    .logo {
+        grid-area: logo;
+        margin-bottom: 20px;
+    }
+    .title {
+        grid-area: title;
+    }
+    .tags {
+        grid-area: tags;
+        margin-bottom: 20px;
+    }
+    .price {
+        grid-area: price;
+    }
+    .credit {
+        grid-area: credit;
+    }
+    .rating {
+        grid-area: rating;
+    }
+    .priceTitle {
+        grid-area: priceTitle;
+    }
+    .creditTitle {
+        grid-area: creditTitle;
+    }
+    .ratingTitle {
+        grid-area: ratingTitle;
+    }
+    .hr {
+        grid-area: hr;
+    }
+    .description {
+        grid-area: description;
+    }
+    .features {
+        grid-area: features;
+        margin-bottom: 20px;
+    }
+    .advBlock {
+        grid-area: advBlock;
+    }
+    .hr2 {
+        grid-area: hr2;
+    }
+    .actions {
+        grid-area: actions;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    .product {
+        display: grid;
+        grid-template-columns: 70px 30px 1fr;
+        grid-template-areas:
+            "logo . title"
+            "logo . tags"
+            "priceTitle priceTitle price"
+            "creditTitle creditTitle credit"
+            "ratingTitle ratingTitle rating"
+            "hr hr hr"
+            "description description description"
+            "features features features"
+            "advBlock advBlock advBlock"
+            "hr2 hr2 hr2"
+            "actions actions actions";
+    }
+    .price,
+    .credit,
+    .rating {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .product {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "logo"
+            "title"
+            "tags"
+            "price"
+            "priceTitle"
+            "credit"
+            "creditTitle"
+            "rating"
+            "ratingTitle"
+            "hr"
+            "description"
+            "features"
+            "advBlock"
+            "hr2"
+            "actions";
+    }
+
+    .price,
+    .credit,
+    .rating {
+        margin-bottom: 10px;
+    }
+    .reviewButton {
+        margin-left: 0;
+        margin-top: 10px;
+    }
+}

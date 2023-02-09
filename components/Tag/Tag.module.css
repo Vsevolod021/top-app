@@ -2,6 +2,8 @@
     display: inline-block;
     box-sizing: border-box;
     border-radius: 20px;
+    margin-bottom: 4px;
+    margin-right: 5px;
 }
 
 .small {
@@ -29,7 +31,7 @@
 
 .gray {
     color: var(--white);
-    background: #B3C0D9;
+    background: #8a99b7;
     font-weight: bold;
 }
 

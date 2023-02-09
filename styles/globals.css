@@ -17,14 +17,24 @@ a {
     box-sizing: border-box;
 }
 
+.visuallyHidden {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: absolute;
+}
+
 :root {
     --black: #3B434E;
+    --gray: #A4A4A4;
     --gray-light: #EBEBEB;
+    --gray-dark: #6c7077;
     --white: white;
-    --primary: #7653FC;
+    --primary: #6849df;
     --primary-hover: #6344df;
     --red: #FC836D;
-    --green: #1DC37E;
+    --red-light: #f7b3a7;
+    --green: #007b48;
     --green-light: #C8F8E4;
     --font-family: "Noto Sans Display", sans-serif;
 }
